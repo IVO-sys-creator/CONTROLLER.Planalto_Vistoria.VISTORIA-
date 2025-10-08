@@ -17,9 +17,9 @@ public class VistoriaController {
 		this.vistoriaDAO = new VistoriaDAO();
 	}
 	public void cadastrarVistoria(int idVistoria, Date dataVistoria, String itensVerificados,
-			String observacoes, int idAgendamento, int idFuncionario) {
+			String observacao, int idAgendamento, int idFuncionario) {
 		
-		Vistoria vistoria = new Vistoria(idVistoria, dataVistoria, itensVerificados, observacoes, idAgendamento, idFuncionario);
+		Vistoria vistoria = new Vistoria(idVistoria, dataVistoria, itensVerificados, observacao, idAgendamento, idFuncionario);
 		
 		vistoriaDAO.salvar(vistoria);
 	}
@@ -39,5 +39,4 @@ public class VistoriaController {
 	public List<Vistoria> listarVistorias() {
 		return vistoriaDAO.listar();
 	}
-
 }
